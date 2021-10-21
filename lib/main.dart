@@ -5,14 +5,34 @@ void main() {
 }
 
 class MeninTirkemem extends StatelessWidget {
-  const MeninTirkemem({Key key}) : super(key: key);
+  MeninTirkemem({Key key}) : super(key: key);
+
+  kolaLipKel() {
+    suuAlipKel();
+    shaardynAty = 'Bishkek';
+  }
+  //Funksiya: funksiyaAty(){},
+  //Bosh funksiya: (){}
 
   @override
   Widget build(BuildContext context) {
+    shaardynAty = 'Bishkek';
+    kolaLipKel();
+    pepsiAlipKel() {
+      shaardynAty = 'Bishkek';
+    }
+
     return MaterialApp(
       home: HomeScreen(),
     );
   }
+
+  // suuAty = '';, bul kata beret, sebebi  suuAlipKel() funksiyanin ichinde gana bar
+  suuAlipKel() {
+    String suuAty;
+  }
+
+  String shaardynAty;
 }
 
 class HomeScreen extends StatefulWidget {
@@ -32,6 +52,8 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 }
+
+//Scope, global, local
 
 //Mindan kiyinkiler, jon gana misal uchun jazilgan
 
@@ -68,7 +90,7 @@ Okuuchu okuuchu = Okuuchu();
 String meninAtym = 'Azamat';
 
 misalFuknsiya() {
-  okuuchu.aty = 'Almaz';
+  okuuchu.familiya = 'Almaz';
   okuuchu.mektepNomeri = 7;
 
   okuuchu.tamakJe();
